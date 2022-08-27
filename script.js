@@ -52,7 +52,7 @@ $(document).ready(function () {
 		margin: 20,
 		loop: true,
 		autoplay: true,
-		autoplayTimeOut: 2000,
+		autoplayTimeOut: 2500,
 		autoplayHoverPause: true,
 		responsive: {
 			0: {
@@ -64,7 +64,7 @@ $(document).ready(function () {
 				nav: false,
 			},
 			1000: {
-				items: 3,
+				items: 2,
 				nav: false,
 			},
 		},
