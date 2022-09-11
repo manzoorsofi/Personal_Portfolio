@@ -26,12 +26,6 @@ $(document).ready(function () {
 		$("html").css("scrollBehavior", "smooth");
 	});
 
-	// toggle menu/navbar script
-	$(".menu-btn").click(function () {
-		$(".navbar .menu").toggleClass("active");
-		$(".menu-btn i").toggleClass("active");
-	});
-
 	// typing text animation script
 	var typed = new Typed(".typing", {
 		strings: ["Developer", "Designer", "Freelancer"],
