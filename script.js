@@ -58,9 +58,20 @@ $(document).ready(function () {
 				nav: false,
 			},
 			1000: {
-				items: 2,
+				items: 3,
 				nav: false,
 			},
 		},
 	});
+});
+
+$(document).ready(function () {
+	// ...existing code...
+
+	// Dark mode toggle
+	$(".dark-mode-toggle").click(function () {
+		$("body").toggleClass("dark-mode");
+	});
+
+	// ...existing code...
 });

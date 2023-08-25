@@ -11,6 +11,31 @@
 html {
 	scroll-behavior: smooth;
 }
+/* Add styles for the dark mode toggle button */
+.dark-mode-toggle {
+	/* position: fixed; */
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	background-color: var(--primary-color);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+	background-color: var(--secondary-color);
+	transform: scale(1.05);
+}
+/* Dark mode styles */
+.dark-mode {
+	background-color: #111;
+	color: #fff;
+}
+
+/* Other styles for dark mode */
+/* ... */
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -124,6 +149,7 @@ section .title::after {
 	font-weight: 500;
 	margin-left: 25px;
 	transition: color 0.3s ease;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 .navbar .menu li a:hover {
 	color: crimson;
@@ -170,7 +196,7 @@ section .title::after {
 /* home section styling */
 .home {
 	display: flex;
-	background: url("images/banner.jpg") no-repeat center;
+	background: url("images/1000034685-01.jpeg.jpg") no-repeat center;
 	height: 100vh;
 	color: #fff;
 	min-height: 500px;
@@ -187,15 +213,18 @@ section .title::after {
 }
 .home .home-content .text-1 {
 	font-size: 27px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 .home .home-content .text-2 {
 	font-size: 75px;
 	font-weight: 600;
 	margin-left: -3px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 .home .home-content .text-3 {
 	font-size: 40px;
 	margin: 5px 0;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 .home .home-content .text-3 span {
 	color: crimson;
@@ -286,6 +315,17 @@ section .title::after {
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
+.card .text a,
+.onet {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.card .text a:hover {
+	text-decoration: underline;
+}
+
 .services .serv-content .card:hover {
 	background: crimson;
 }
