@@ -17,10 +17,6 @@
 </head>
 
 <body>
-  <audio id="backgroundSong" autoplay>
-    <source src="images/audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
   <div class="scroll-up-btn">
     <i class="fas fa-angle-up"></i>
   </div>
@@ -52,7 +48,22 @@
         <div class="text-1">Hello, my name is</div>
         <div class="text-2">Manzoor sofi</div>
         <div class="text-3">And I'm a <span class="typing"></span></div>
-        <a href="#contact">Hire me</a>
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+          </ul>
+        </div>
+        <!-- <a href="#contact">Hire me</a> -->
       </div>
     </div>
   </section>
@@ -68,39 +79,49 @@
         <div class="column right">
           <div class="text">I'm Manzoor and I'm a <span class="typing-2"></span></div>
           <p>Dedicated and passionate about the coding stuff.</p>
-          <a target="_blank" href="./res.pdf">Download CV</a>
+          <a id="pdfLink" href="#">View CV</a>
+          <div class="pdf-modal">
+            <div class="pdf-container">
+              <object class="pdf-object" data="res.pdf" type="application/pdf">
+                <p>Your browser does not support PDFs. Please update your browser to view the PDF.</p>
+              </object>
+            </div>
+          </div>
+          <div class="services" id="services">
+            <h1>My Social Links</h1>
+            <div class="basr-social-share social">
+              <ul>
+                <li class="oneee">
+                  <a rel="noreferrer" class="github" target="_blank" href="https://github.com/manzoorsofi">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </li>
+                <li class="oneee">
+                  <a rel="noreferrer" class="linkedin" target="_blank" href="https://www.linkedin.com/in/manzoor-sofi">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="oneee">
+                  <a rel="noreferrer" class="instagram" target="_blank"
+                    href="https://www.facebook.com/back.bancher.58910">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="services" id="services" style="text-align: center;">
-    <h1>My Social Links</h1>
-    <div class="basr-social-share social">
-      <ul>
-        <li>
-          <a rel="noreferrer" class="github" target="_blank" href="https://github.com/manzoorsofi">
-            <i class="fa fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a rel="noreferrer" class="linkedin" target="_blank" href="https://www.linkedin.com/in/manzoor-sofi">
-            <i class="fa fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a rel="noreferrer" class="instagram" target="_blank" href="https://www.facebook.com/back.bancher.58910">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-      </ul>
     </div>
   </section>
 
   <!-- skills section start -->
   <section class="skills" id="skills">
     <div class="max-width">
-      <h2 class="title">My Skills</h2>
+      <!-- <h2 class="title">My Skills</h2> -->
       <div class="skills-content">
         <div class="column left">
           <div class="text">My creative skills & experiences.</div>
@@ -165,14 +186,14 @@
   <!-- teams section start -->
   <section class="teams" id="teams">
     <div class="max-width">
-      <h2 class="title">Meet the Team</h2>
+      <h2 class="title titles">Meet the Team</h2>
       <div class="carousel owl-carousel">
         <div class="card">
           <div class="box">
             <img src="images/profile-3.jpg" alt="Manzoor Sofi">
             <div class="text"><a href="https://www.linkedin.com/in/manzoor-sofi/" target="_blank">Manzoor Sofi</a></div>
           </div>
-          <p>Frappe Developer.</p>
+          <p class="twooo">Frappe Developer.</p>
         </div>
         <div class="card">
           <div class="box">
@@ -180,14 +201,14 @@
             <div class="text"><a href="https://www.linkedin.com/in/ishaan-vashishtha-767a4123b/" target="_blank">Ishaan
                 Vashishtha</a></div>
           </div>
-          <p>Python developer.</p>
+          <p class="twooo">Python developer.</p>
         </div>
         <div class="card">
           <div class="box">
             <img src="images/profile-2.jpg" alt="Shreyas Jamkhandi">
             <div class="text"><a href="https://shreyasjamkhandi.tech/" target="_blank">Shreyas Jamkhandi</a></div>
           </div>
-          <p>Full-Stack Web Developer.</p>
+          <p class="twooo">Full-Stack Web Developer.</p>
         </div>
         <div class="card">
           <div class="box">
@@ -195,14 +216,14 @@
             <div class="text"><a href="http://www.linkedin.com/in/akhila-kulkarni-0090b7218" target="_blank">Akhila
                 Kulkarni</a></div>
           </div>
-          <p>Android Developer.</p>
+          <p class="twooo">Android Developer.</p>
         </div>
         <div class="card">
           <div class="box">
             <img src="images/profile-5.jpeg" alt="Madhushri Kulkarni">
             <div class="text"><a href="http://kulkarnimadhushri.in/" target="_blank">Madhushri Kulkarni</a></div>
           </div>
-          <p>Sarcastic memer.</p>
+          <p class="twooo">Sarcastic memer.</p>
         </div>
         <div class="card">
           <div class="box">
@@ -210,7 +231,7 @@
             <div class="text"><a href="https://instagram.com/anirudh.rege?igshid=YmMyMTA2M2Y=" target="_blank">Anirudh
                 Rege</a></div>
           </div>
-          <p>Adventurer.</p>
+          <p class="twooo">Adventurer.</p>
         </div>
       </div>
     </div>
@@ -280,6 +301,23 @@
     <span>Created By Manzoor Sofi</a> | <span class="far fa-copyright"></span>
       2022 All rights reserved.</span>
   </footer>
+
+  <script>
+    const pdfLink = document.getElementById('pdfLink');
+    const pdfModal = document.querySelector('.pdf-modal');
+    const pdfContainer = document.querySelector('.pdf-container');
+
+    pdfLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      pdfModal.style.display = 'flex'; // Using "flex" to center content vertically
+    });
+
+    pdfModal.addEventListener('click', (event) => {
+      if (event.target === pdfModal) {
+        pdfModal.style.display = 'none';
+      }
+    });
+  </script>
 
   <script src="script.js"></script>
   <script src="https://use.fontawesome.com/9c0a98c2fb.js"></script>
