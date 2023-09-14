@@ -249,7 +249,11 @@ section .title::after {
 }
 
 /* about section styling */
-
+.about,
+.skills {
+	/* background-color: #4d493d; */
+	filter: blur();
+}
 .about .title::after {
 	content: "who I am";
 }
@@ -262,6 +266,7 @@ section .title::after {
 	object-fit: cover;
 	border-radius: 6px;
 	filter: drop-shadow(10px 8px 6px);
+	border-radius: 15px 100px 30px;
 	/* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9); */
 }
 .about .about-content .left img:hover {
@@ -294,6 +299,7 @@ section .title::after {
 	border: 2px solid black;
 	transition: all 0.3s ease;
 	margin-bottom: 17px;
+	border-radius: 15px 25px 30px;
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 .about .about-content .right a:hover {
@@ -405,11 +411,12 @@ skills .title {
 }
 .skills .skill-card {
 	text-align: center;
-	padding: 20px;
+	padding: 30px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
 	transition: transform 0.3s ease-in-out;
 	cursor: pointer;
+	border-radius: 20px 65px 20px;
 }
 
 .skills .skill-link {
