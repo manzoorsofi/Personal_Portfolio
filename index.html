@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio Website</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -13,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
 </head>
 
 <body>
@@ -32,9 +33,7 @@
         <li><a href="#contact" class="menu-btn">Contact</a></li>
         <!-- <li class="dark-mode-toggle"> <i class="fas fa-moon"></i> Dark Mode</li> -->
       </ul>
-      <div class="dark-mode-toggle">
-        <i class="fas fa-moon"></i> Dark Mode
-      </div>
+
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
       </div>
@@ -44,11 +43,14 @@
   <!-- home section start -->
   <section class="home" id="home">
     <div class="max-width">
-      <div class="home-content show-on-scroll">
-        <div class="text-1">Hello, my name is</div>
-        <div class="text-2">Manzoor sofi</div>
+      <div class="home-content ">
+        <div class="text-1">Hi, 👋🏾</div>
+        <div class="text-2">I'm Manzoor sofi</div>
         <div class="text-3">And I'm a <span class="typing"></span>
         </div>
+      </div>
+      <div class="imag">
+        <img src="/images/Profile.jpg">
       </div>
     </div>
   </section>
@@ -292,21 +294,35 @@
   </footer>
 
   <script>
-    const pdfLink = document.getElementById('pdfLink');
-    const pdfModal = document.querySelector('.pdf-modal');
-    const pdfContainer = document.querySelector('.pdf-container');
-
-    pdfLink.addEventListener('click', (event) => {
-      event.preventDefault();
-      pdfModal.style.display = 'flex'; // Using "flex" to center content vertically
-    });
-
-    pdfModal.addEventListener('click', (event) => {
-      if (event.target === pdfModal) {
-        pdfModal.style.display = 'none';
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+      
+          if (!entry.target.closest('.grey')) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              entry.target.classList.remove('not-in-view');
+            } else {
+              entry.target.classList.remove('in-view');
+              entry.target.classList.add('not-in-view');
+            }
+          }
+        });
+      },
+      {
+        rootMargin: '0px',
+        threshold: [0, 0.1, 1],
       }
+    );
+
+    const tags = document.querySelectorAll('figure, h1, h2, h3, h4, h5, p, img, div,section,input,a,img');
+
+    tags.forEach((tag) => {
+      observer.observe(tag);
     });
-  </script>
+
+  </script> 
+
   <script src="animate-on-scroll.js"></script>
   <script src="script.js"></script>
   <script src="https://use.fontawesome.com/9c0a98c2fb.js"></script>

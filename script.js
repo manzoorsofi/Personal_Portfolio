@@ -65,13 +65,4 @@ $(document).ready(function () {
 	});
 });
 
-$(document).ready(function () {
-	// ...existing code...
 
-	// Dark mode toggle
-	$(".dark-mode-toggle").click(function () {
-		$("body").toggleClass("dark-mode");
-	});
-
-	// ...existing code...
-});
