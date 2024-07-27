@@ -1,3 +1,4 @@
+// console.log("hi sojiv")
 $(document).ready(function () {
 	$(window).scroll(function () {
 		// sticky navbar on scroll script
